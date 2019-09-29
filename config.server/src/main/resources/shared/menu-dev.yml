@@ -1,0 +1,19 @@
+server:
+  port: 8020
+spring:
+  applicaiton:
+    name: menu
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      prefer-ip-address: true
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.wmr.springcloud.menuDemo.entity
